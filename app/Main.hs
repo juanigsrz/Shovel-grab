@@ -1,6 +1,9 @@
-module Main where
+module Main (main) where
 
-import Utility
+import Parsing
+import Text.Megaparsec
 
 main :: IO ()
-main = someFunc
+main = do
+  input <- getContents
+  parseTest parser input
