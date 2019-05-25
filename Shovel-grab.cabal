@@ -1,0 +1,68 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 1ac86cfa0b44c471097557ab0186dd42a12f2b5492b6b864b875485e28a5944c
+
+name:           Shovel-grab
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/juanigsrz/Shovel-grab#readme>
+homepage:       https://github.com/juanigsrz/Shovel-grab#readme
+bug-reports:    https://github.com/juanigsrz/Shovel-grab/issues
+author:         Juan Ignacio Suarez
+maintainer:     juanigsrz@gmail.com
+copyright:      2019 Juan Ignacio Suarez
+license:        MIT
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/juanigsrz/Shovel-grab
+
+library
+  exposed-modules:
+      AST
+      Eval
+      Parsing
+      Utility
+  other-modules:
+      Paths_Shovel_grab
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , megaparsec ==7.0.5
+  default-language: Haskell2010
+
+executable Shovel-grab-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_Shovel_grab
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Shovel-grab
+    , base >=4.7 && <5
+    , megaparsec ==7.0.5
+  default-language: Haskell2010
+
+test-suite Shovel-grab-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_Shovel_grab
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Shovel-grab
+    , base >=4.7 && <5
+    , megaparsec ==7.0.5
+  default-language: Haskell2010

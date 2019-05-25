@@ -1,0 +1,49 @@
+name:                Shovel-grab
+version:             0.1.0.0
+github:              "juanigsrz/Shovel-grab"
+license:             MIT
+author:              "Juan Ignacio Suarez"
+maintainer:          "juanigsrz@gmail.com"
+copyright:           "2019 Juan Ignacio Suarez"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            a DSL for generating personalized resumes 
+# category:            DSL
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/juanigsrz/Shovel-grab#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- megaparsec == 7.0.5
+
+library:
+  source-dirs: src
+
+executables:
+  Shovel-grab-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Shovel-grab
+
+tests:
+  Shovel-grab-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - Shovel-grab
