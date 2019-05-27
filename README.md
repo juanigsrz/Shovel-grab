@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/juanigsrz/Shovel-grab.svg?branch=master)](https://travis-ci.org/juanigsrz/Shovel-grab)
+
 # Shovel-grab
 Shovel-grab is a Domain Specific Language (DSL) for generating personalized resumes.
 
