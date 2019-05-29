@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 01578f9f458ff72fa7a32c8c138966ae91f67be4cd6685997a34265240610eca
+-- hash: a525606110dfa861b02cf292b38759bffff1e51b09f74df9f0831f4352a21070
 
 name:           Shovel-grab
 version:        0.1.0.0
@@ -37,6 +37,7 @@ library
       src
   build-depends:
       base >=4.12 && <5
+    , email-validate >=2.3.2 && <3
     , megaparsec >=7 && <8
   default-language: Haskell2010
 
@@ -50,6 +51,7 @@ executable Shovel-grab-exe
   build-depends:
       Shovel-grab
     , base >=4.12 && <5
+    , email-validate >=2.3.2 && <3
     , megaparsec >=7 && <8
   default-language: Haskell2010
 
@@ -64,5 +66,6 @@ test-suite Shovel-grab-test
   build-depends:
       Shovel-grab
     , base >=4.12 && <5
+    , email-validate >=2.3.2 && <3
     , megaparsec >=7 && <8
   default-language: Haskell2010

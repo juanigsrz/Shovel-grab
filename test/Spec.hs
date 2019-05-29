@@ -1,8 +1,2 @@
--- TODO: implement tests
-{-
 main :: IO ()
-main = -- run tests
--}
-
-main :: IO ()
-main = putStrLn "Hello world!"
+main = putStrLn "\nHello world!\nTests are not implemented yet :)"
